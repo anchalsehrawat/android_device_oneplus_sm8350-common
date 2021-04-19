@@ -302,9 +302,6 @@ on post-fs-data
 
     mkdir /data/vendor/secure_element 0777 system system
 
-    #Create IOP  deamon related dirs
-    mkdir /data/vendor/iop 0700 root system
-
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
@@ -345,12 +342,17 @@ service nqnfcinfo /system/vendor/bin/nqnfcinfo
     user system
     oneshot
 
-service iop /system/vendor/bin/iop
+service qcomsysd /system/vendor/bin/qcom-system-daemon
     class main
     user root
-    group root
+    group root diag oem_2901
     disabled
-    socket iop seqpacket 0666 root system
+
+on property:persist.vendor.qcomsysd.enabled=1
+    enable qcomsysd
+
+on property:persist.vendor.qcomsysd.enabled=0
+    stop qcomsysd
 
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
