@@ -35,6 +35,8 @@ on early-init
 
     # Boot without modules
     setprop vendor.all.modules.ready 1
+    # Start audio adsp rpc daemon at early init stage
+    start vendor.audioadsprpcd_audiopd
 
 on init
     # Scheduler uclamp
