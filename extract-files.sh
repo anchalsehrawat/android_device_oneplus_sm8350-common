@@ -104,7 +104,7 @@ function blob_fixup() {
             ;;
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             "${SIGSCAN}" -p "23 0B 00 94" -P "1F 20 03 D5" -f "${2}"
-
+	    ;;
         odm/etc/dolby/multimedia_dolby_dax_default.xml)
             sed -i "/volume-leveler-enable/ s/true/false/g" "${2}"
             ;;
@@ -113,6 +113,9 @@ function blob_fixup() {
             ;;
         odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so)
             grep -q libjsoncpp-v30.so "${2}" || "${PATCHELF}" --replace-needed "libjsoncpp.so" "libjsoncpp-v30.so" "${2}"
+            ;;
+	odm/lib/libdlbdsservice_v3_6.so|odm/lib/libstagefright_soft_ddpdec.so|odm/lib/libstagefrightdolby.so|odm/lib64/libdlbdsservice_v3_6.so)
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
     esac
 }
