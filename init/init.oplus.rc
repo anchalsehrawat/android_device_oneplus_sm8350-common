@@ -1,3 +1,4 @@
+
 #
 # Copyright (C) 2022-2025 The LineageOS Project
 #
@@ -54,6 +55,10 @@ on property:ro.boot.prjname=*
     setprop ro.separate.soft ${ro.boot.prjname}
 
 on property:sys.boot_completed=1
+
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
     # Widevine
     copy /vendor/etc/oplus_Widevine_licenses.pfm /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
