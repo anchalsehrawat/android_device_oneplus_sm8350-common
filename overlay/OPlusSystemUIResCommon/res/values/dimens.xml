@@ -6,6 +6,6 @@
 <resources>
 
      <!-- Blur radius behind Notification Shade -->
-     <dimen name="max_shade_window_blur_radius">23.36dp</dimen>
+     <dimen name="max_shade_window_blur_radius">11dp</dimen>
 
 </resources>
