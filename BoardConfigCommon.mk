@@ -61,6 +61,9 @@ BOARD_EROFS_COMPRESSOR := none
 # Camera
 TARGET_CAMERA_SERVICE_EXT_LIB := //$(COMMON_PATH):libcameraservice_extension.opsm8350
 
+#Dolby
+include vendor/oneplus/dolby/BoardConfigDolby.mk
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
