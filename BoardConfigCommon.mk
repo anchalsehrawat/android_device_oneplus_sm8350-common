@@ -58,6 +58,9 @@ TARGET_CAMERA_SERVICE_EXT_LIB := //$(COMMON_PATH):libcameraservice_extension.zit
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 
+#Dolby
+include vendor/oneplus/dolby/BoardConfigDolby.mk
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
