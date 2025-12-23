@@ -61,6 +61,9 @@ TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 #Dolby
 include vendor/oneplus/dolby/BoardConfigDolby.mk
 
+# EROFS
+BOARD_EROFS_COMPRESSOR := none
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
