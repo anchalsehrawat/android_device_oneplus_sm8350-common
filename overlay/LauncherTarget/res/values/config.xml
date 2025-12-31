@@ -12,4 +12,9 @@
 -->
 <resources>
     <dimen name="max_depth_blur_radius_enhanced">10dp</dimen>
+	
+<!-- if the flag for apps blur is disabled and overview background wallpaper is disabled, 
+     it will use max_depth_blur_radiu -->
+    <integer name="max_depth_blur_radius">10</integer>
+
 </resources>
