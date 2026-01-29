@@ -28,6 +28,9 @@ persist.dbg.wfc_avail_ovr=1
 # Launcher
 ro.launcher.blur.appLaunch=0
 
+# Kernel log
+ro.logd.kernel=true
+
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.thumbnail.prefer_hw_codecs=true
