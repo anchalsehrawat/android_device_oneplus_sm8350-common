@@ -82,4 +82,11 @@
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">150%</fraction>
+
+    <!-- Whether device has VOOC charging support -->
+    <bool name="config_hasVoocCharger">true</bool>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">"/sys/class/oplus_chg/battery/fast_charge"</string>
+
 </resources>
