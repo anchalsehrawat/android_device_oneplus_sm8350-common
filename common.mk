@@ -194,6 +194,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_oplus)
 
+# IR
+$(call inherit-product, vendor/oneplus/ir/config.mk)
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
 
