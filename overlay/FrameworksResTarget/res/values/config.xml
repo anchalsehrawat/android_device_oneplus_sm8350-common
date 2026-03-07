@@ -116,5 +116,8 @@
          Refer to power.h for details.
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    
+    <!-- PowerOffAlarmService -->
+    <bool name="config_powerOffAlarmEnabled">true</bool>
 
 </resources>
